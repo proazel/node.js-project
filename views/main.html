@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/css/jquery.fullPage.css">
+    <link rel="stylesheet" href="/css/main.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js">
+    </script>
+    <script src="/js/jquery.fullPage.js"></script>
+    <script src="/js/main.js"></script>
+</head>
+
+<body>
+{% include "./layout/top.html" %}
+
+    <style>
+        body{
+            background: none;
+        }
+        .header{
+            background: none;
+        }
+        .footer{
+            background: none;
+        }
+    </style>
+
+    <!--햄버거 메뉴-->
+    <div class="hamberger">
+        <input type="checkbox" id="menu">
+        <label for="menu" class="three_bar" onclick="menu_on()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+    </div>
+
+    <!--fullpage start-->
+    <div id="fullpage">
+        <div class="section section1">
+            <div class="container">
+                <div class="textBox">
+                    <h1>게임회사 취업률 1위!</h1>
+                    <h5>(2019년도 전국 게임 아카데미 기준)</h5>
+                    <h3>약속을 지키기 위해 '취업책임제도' 운영</h3>
+                    <h3>현업인 멘토와 끊임 없는 소통</h3>
+                </div>
+                <a href="localhost:3000/curr/" class="btn btn_1 mobile_float">교육과정</a>
+                <a href="localhost:3000/apply/" class="btn btn_2 mobile_float">지원하기</a>
+            </div>
+        </div>
+        <div class="section section2">
+            <div class="container">
+                    <div class="textBox">
+                    <h1 style="margin-bottom: 20px;">게임 개발자가 되는 가장 확실한 솔루션!</h1>
+                    <h3>고용노동부 5년 연속 우수 훈련기관</h3>
+                    <h3>100% 국비 지원 무료 교육</h3>
+                    <h3>교재 무료 지급, 식비와 차비 지원</h3>
+                </div>
+                <a href="localhost:3000/curr/" class="btn btn_1 mobile_float">교육과정</a>
+                <a href="localhost:3000/apply/" class="btn btn_2 mobile_float">지원하기</a>
+            </div>
+        </div>
+        <div class="section section3">
+            <div class="container">
+                <div class="textBox">
+                    <h1>정부핵심인재육성 혁신 교육기관</h1>
+                    <h2>KDT(K-Digital Training)</h2>
+                    <h3>블록체인 기반의 핀테크 전문과정</h3>
+                    <h3>실무에 초점을 맞춘 프로젝트 기반의 직무 중심 교육</h3>
+                    <h3>교육비용 전액 지원 및 훈련 장려금 최대 300만원</h3>
+                </div>
+                <a href="localhost:3000/curr/" class="btn btn_1 mobile_float">교육과정</a>
+                <a href="localhost:3000/apply/" class="btn btn_2 mobile_float">지원하기</a>
+            </div>
+        </div>
+        <div class="section section4">
+            <div class="container">
+                <div class="textBox">
+                    <h1>게임 아카데미 최초 2회차 선정</h1>
+                    <h1 style="margin-bottom: 20px;">5년 연속 우수 훈련 기관!</h1>
+                    <h3>직업훈련기관 게임교육 상위 1%</h3>
+                </div>
+                <a href="localhost:3000/curr/" class="btn btn_1 mobile_float">교육과정</a>
+                <a href="localhost:3000/apply/" class="btn btn_2 mobile_float">지원하기</a>
+            </div>
+        </div>
+        <div class="section section5">
+            <div class="container">
+                <div class="textBox">
+                    <h1>다가오는 7월 개강일정 안내</h1>
+                    <h1 style="margin-bottom: 40px;">무료 상담 신청하기!</h1>
+                </div>
+                <a href="localhost:3000/curr/" class="btn btn_1 mobile_float">교육과정</a>
+                <a href="localhost:3000/apply/" class="btn btn_2 mobile_float">지원하기</a>
+            </div>
+        <!--fullpage end-->
+
+            <!--햄버거 메뉴 눌렀을때 나올 흰 바탕 화면 --- absolute,hide 이용해서 숨어있다가 메뉴 누르면 display 변화식으로-->
+            <!--mobile hamberger menu start-->
+            <div class="menu_container menu_clicked">
+                <input type="checkbox" id="menu1">
+                <label for="menu1" class="x_bar" onclick="menu_out()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+                <h1>학원소개</h1>
+                <h1>교육과정</h1>
+                <h1>취업자인터뷰</h1>
+                <h1>알람 및 질문</h1>
+                <h1>지원서</h1>
+                <h1>로그인</h1>
+                <h1>회원가입</h1>
+                <a href="localhost:3000/apply/" class="btn btn_2 mobile_float">지원하기</a>
+            </div>
+            <!--mobile hamberger menu end-->
+
+{% include "./layout/bottom.html" %}

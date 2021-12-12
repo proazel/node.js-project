@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <script type="text/javascript" src="/js/FAQ.js"></script>
+    <link rel="stylesheet" href="/css/FAQ.css">
+</head>
+
+<body>
+{% include "../layout/top.html" %}
+
+    <!--FAQ start-->
+    <div id="FAQLayer">
+        <div id="FAQPage">
+            <div id="FAQBox">
+                <h1>FAQ</h1>
+
+                <div id="category">
+
+                    {% for item in categoryList %}
+                    <div class="ctg ctg_{{item.id}}">{{item.subject}}</div>
+                    {% endfor %}
+                </div>
+
+                <div id="QNA" class="getQna" style="display: block;">
+                    {% for item in faqList %}
+                    <div class="faq faq_{{item.category}}">
+                        <ul>{{item.title}}<span>▽</span></ul>
+                        <ul class="faqSub">
+                            <li>{{item.content}}</li>
+                        </ul>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--FAQ end-->
+
+{% include "../layout/bottom.html" %}

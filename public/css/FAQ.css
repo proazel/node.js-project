@@ -1,0 +1,85 @@
+/* FAQ */
+#FAQLayer{
+    height: 100%;
+    padding-top: 56px;
+}
+#FAQLayer > #FAQPage{
+    height: 100%;
+    background: #000;
+}
+#FAQLayer > #FAQPage > #FAQBox{
+    width: 1160px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 50px 20px 140px 20px;
+}
+#FAQLayer > #FAQPage > #FAQBox > h1{
+    margin-bottom: 60px;
+    font-size: 60px;
+    color: #fff;
+}
+#FAQLayer > #FAQPage > #FAQBox > #category{
+    display: inline-block;
+    margin-bottom: 50px;
+}
+#FAQLayer > #FAQPage > #FAQBox > #category > div{
+    height: 25px;
+    padding: 14px 24px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    float: left;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: -1px;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    cursor: pointer;
+}
+#FAQLayer > #FAQPage > #FAQBox > #category > div:hover{
+    color: #000;
+    transition: 0.5s;
+    background: #fff;
+}
+#FAQLayer > #FAQPage > #FAQBox > #QNA{
+    width: 1160px;
+}
+#FAQLayer > #FAQPage > #FAQBox > #QNA > div > ul{
+    padding: 20px 30px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #fff;
+    border: 1px solid #fff;
+    border-top: none;
+    cursor: pointer;
+}
+#FAQLayer > #FAQPage > #FAQBox > #QNA > div > ul:first-child{
+    border-top: 1px solid #fff;
+}
+#FAQLayer > #FAQPage > #FAQBox > #QNA > div > ul:first-child > span{
+    font-size: 20px;
+    line-height: 15px;
+    float: right;
+}
+#FAQLayer > #FAQPage > #FAQBox > #QNA > div > ul:first-child:hover{
+    color: #000;
+    background: #fff;
+    transition: 0.25s;
+}
+#FAQLayer > #FAQPage > #FAQBox > #QNA > div > ul:nth-child(2){
+    padding: 20px 40px;
+    background:rgb(17, 17, 17);
+    border: 1px solid #fff;
+    border-top: none;
+    cursor: pointer;
+}
+#FAQLayer > #FAQPage > #FAQBox > #QNA > div > ul:nth-child(2) > li{
+    margin: 20px 0px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.faqSub{
+    display:none;
+}

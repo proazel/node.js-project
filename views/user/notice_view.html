@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>notice_view</title>
+    <link rel="stylesheet" href="/css/board_view.css">
+</head>
+
+<body>
+{% include "../layout/top.html" %}
+
+    <!--notice_view start-->
+    <div id="boardLayer">
+        <div id="boardPage">
+            <div id="boardBox">
+                <h1>공지사항</h1>
+                <div id="content">
+                    <div id="space" style="height: 35px;"></div>
+                    <div id="boardOuter">
+                        <table id="board">
+                            <thead>
+                                <tr>
+                                    <th>제목</th>
+                                    <td colspan="3">{{result.title}}</td>
+                                    <input type="hidden" name="postid" id="postId" value="{{result.id}}">
+                                </tr>
+                                <tr>
+                                    <th>등록일</th>
+                                    <td>{{result.registereddate}}</td>
+                                    <th>조회수</th>
+                                    <td>{{result.hit}}</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td colspan="4">
+                                        <pre>{{result.content}}</pre>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="btnGroup_center">
+                        <button type="button" onclick="location.href='http://localhost:3000/notice/'">목록으로</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--notice_view end-->
+
+{% include "../layout/bottom.html" %}
